@@ -1,0 +1,36 @@
+#!/bin/bash 
+
+##################
+#Author: Lateef
+#Date: 31st march 2024
+#version: 1.0
+
+#Creating account variable 
+read -p "Enter name:" Username
+read -p "Enter mail" Mail
+read -p "Enter password" Password
+
+#printing out put after scucessfully creating an account 
+echo "Loading............"
+sleep 7
+echo "Account Succesfuly created"
+sleep 2
+echo "Proceed to login"
+
+# User login input 
+read -p "Enter name:" user
+read -p "Enter mail" mail
+read -p "Enter password" pass
+
+#Deciding if they are allowed to login or not
+if [[ $user == $Username && $mail == $Mail && $pass == $Password ]];
+then
+	echo "Login details correct"
+	sleep 2
+	echo "SUCCESSFULLY LOGGED IN"
+else 
+	echo "Incorrect details"
+	sleep 2
+	echo "Try again"
+fi
+
